@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/04bf603a0f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="icon.png">
+    <script src="script.js" defer></script>
     <meta name="description" content="Welcome to Onlinity, world of infinite online possibilities.">
     <meta name="keywords" content="Onlinity, onlinity, pavle ignjatovic">
     <title>Onlinity</title>
@@ -17,85 +18,35 @@
 <body>
     <header>
       <img src="icon.png" alt="onlinity">
-      <h1>Onlinity</h1>
+      <h1>Onlinity priprema</h1>
     </header>
 
-   <div class="content">
-    <h2>Biologija, kontrolni zadatak 2, 2022/23</h2>
-
-    <textarea name="text" id="text" cols="20" rows="5" readonly></textarea>
-
-    <button type="submit" id="next">Sledeće pitanje</button>
-   </div>
-
-
-<footer>
-  <div class="media">
-    <a href="https://ignjatovicpavle.github.io/"><i class="fa-solid fa-user fa-flip" style="--fa-animation-duration: 2s;"></i></a>
-    <a target="_blank" href="mailto:pavle.ignjatovic.08@gmail.com" title="pavle.ignjatovic.08@gmail.com"><i class="fa-solid fa-envelope fa-flip" style="--fa-animation-duration: 2s;"></i></a>
-  </div>
-  <p>Copyright © 2022 Pavle Ignjatović, Onlinity</p>
-</footer>
-
-
-<script>
+    <div class="responsive">
+      <div class="gallery">
+        <a href="question.html?text=p1"><div class="desc biology">Endokrini sistem. Hormoni.</div></a>
+      </div>
+    </div>
     
-
-
-let p1 = 'Šta su endokrine žlezde?'
-let p2 = 'Šta su hormoni?'
-let p3 = 'Koje endokrine žlezde se nalaze u telu čoveka?'
-let p4 = 'Koja je uloga epifize?'
-let p5 = 'Koja je uloga hipofize?'
-let p6 = 'Koja je uloga štitne žlezde?'
-let p7 = 'Koja je uloga paraštitnih žlezda?'
-let p8 = 'Koja je uloga timusa (grudne žlezde)?'
-let p9 = 'Koja je uloga gušterače (pankreasa)?'
-let p10 = 'Koja je uloga nadbubrežnih žlezda?'
-let p11 = 'Koje su muške polne žlezde?'
-let p12 = 'Koje su ženske polne žlezde?'
-let p13 = 'Koliko traje menstrualni ciklus?'
-let p14 = 'Koji su delovi menstrualnog ciklusa i koliko traju?'
-let p15 = 'Šta je menopauza?'
-let p16 = 'Šta je FSH i čemu služi?'
-let p17 = 'Šta je homeostaza?'
-let p18 = 'Šta je i koje su vrste povratne sprege?'
-let p19 = 'Koji su primeri pozitivne povratne sprege?'
-let p20 = 'Koji su primeri negativne povratne srpege?'
-let p21 = 'Koji su tipovi stimulacije endokrinih žlezda?'
-let p22 = 'Šta je termoregulacija?'
-let p23 = 'Kako se delje životinje prema načinu termoregulacije?'
-let p24 = 'Kako ektotermni organizmi vrše termoregulaciju?'
-let p25 = 'Koje su evolutivne prednosti endoterma?'
-let p26 = 'Koje su adaptacije endoterma?'
-let p27 = 'Gde se stvaraju biljni hormoni'
-let p28 = 'Kako se prenose biljni hormoni?'
-let p29 = 'Koji su biljni hormoni i čemu služe?'
-let p30 = 'Šta su monokulture i korovi?'
-let p31 = 'Koji se procesi sa vodom dešavaju kod biljaka?'
-let p32 = 'Koji su reaktanti, a koji produkti fotosinteze?'
-let p33 = 'Koji su reaktanti, a koji produkti disanja (kod biljaka)?'
-let p34 = 'Zašto se dešava transpiracija?'
-let p35 = 'Šta je eutrofikacija i cvetanje vode?'
-let finish = 'Ovo su sva pitanja!'
-
-const lista = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, finish]
-
-k = 0
-document.getElementById('text').value = lista[k]
-
-document.getElementById('next').onclick = function(){
-    k += 1
-    if(k < 36){
-        document.getElementById('text').value = lista[k]
-    } else{
-        k = 0
-        document.getElementById('text').value = lista[k]
-    }
     
-}
+    <div class="responsive">
+      <div class="gallery">
+        <a href="question.html?text=p2"><div class="desc biology">Poreklo i raznovrsnost živog sveta, Promene u toku razvića.</div></a>
+      </div>
+    </div>
 
-</script>
+    <div class="responsive">
+      <div class="gallery">
+        <a href="question.html?text=p3"><div class="desc geography">Stanovništvo i naselja Srbije.</div></a>
+      </div>
+    </div>
+
+  <footer>
+    <div class="media">
+      <a href="https://ignjatovicpavle.github.io/"><i class="fa-solid fa-user fa-flip" style="--fa-animation-duration: 2s;"></i></a>
+      <a target="_blank" href="mailto:pavle.ignjatovic.08@gmail.com" title="pavle.ignjatovic.08@gmail.com"><i class="fa-solid fa-envelope fa-flip" style="--fa-animation-duration: 2s;"></i></a>
+    </div>
+    <p>Copyright © 2022 Pavle Ignjatović, Onlinity</p>
+  </footer>
 
 
 </body>

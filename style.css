@@ -8,6 +8,17 @@ h1{
     font-size: 60px;
 }
 
+@media (width < 500px){
+    h1{
+        font-size: 45px;
+    }
+}
+
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 header{
     display: flex;
     justify-content: center;
@@ -18,6 +29,90 @@ header{
 
 header img{
     height: 60px;
+}
+
+.biology{
+    background: url(biology.jpg) no-repeat right;
+    color: white;
+}
+
+.serbian{
+    background: url(serbian.jpg) no-repeat bottom left fixed;
+    background-position: top center;
+    background-size: cover;
+    color: white;
+}
+
+.music{
+    background: url(music.jpg) no-repeat bottom center fixed;
+    background-position: top center;
+    background-size: cover;
+    color: white;
+}
+
+.geography{
+    background: url(geography.jpg) no-repeat left;
+    color: white;
+}
+
+
+div.gallery {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+  }
+  
+div.gallery:hover {
+    box-shadow: 0 4px 8px 0 rgba(58, 126, 210, 0.2), 0 6px 20px 0 rgba(58, 126, 210, 0.19);
+    transition: all 0.2s ease-in-out;
+}
+  
+div.gallery img{
+    width: 100%;
+    height: auto;
+}
+  
+div.desc {
+    padding: 15px;
+    text-align: center;
+    font-weight: 800;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+  
+@media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+}
+  
+@media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+}
+  
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+#questions *{
+    margin: 5px;
+    font-size: large;
 }
 
 
@@ -57,10 +152,12 @@ header img{
     border: 1px solid #777;
 }
 
+
 footer{
     width: 100%;
     text-align: center;
     padding: 30px 0;
+    margin-top: 100px;
 }
 
 footer h4{
