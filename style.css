@@ -37,9 +37,7 @@ header img{
 }
 
 .serbian{
-    background: url(serbian.jpg) no-repeat bottom left fixed;
-    background-position: top center;
-    background-size: cover;
+    background: url(serbian.jpg) no-repeat center;
     color: white;
 }
 
@@ -110,7 +108,7 @@ a{
 
 
 
-#questions *{
+main *{
     margin: 5px;
     font-size: large;
 }

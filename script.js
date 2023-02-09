@@ -1,4 +1,6 @@
-let parameter = location.search.split('=')[1]
+//https://onlinity.tk/question.html?text=p4
+let question_parameter = location.search.split('&')[0].split('=')[1]
+let format_parameter = location.search.split('&')[1].split('=')[1]
 
 var p1 = [
     'Šta su endokrine žlezde?',
@@ -89,13 +91,48 @@ var p3 = [
     'Koji tipovi gradskih naselja postoje i koje su njihove odlike?'
 ]
 
-let list = document.getElementById('questions')
-var num = 10
+var p4 = [
+    '!Po mestu tvorbe:',
+    'Dvousneni: B, P, M',
+    'Usneno-zubni: V, F',
+    'Zubni: D, T, Z, S, C',
+    'Prednjonepčani: Č, Đ, Ž, Š, Nj, ć, Lj, J, Dž',
+    'Zadnjonepčani: K, G, H',
+    'Nadzubni: L, R, N',
+    ' ',
+    '!Po zvučnosti:',
+    'Zvučni: vokali (A, E, I, O, U), sonanti (V, R, L, J, Lj, M, N, Nj), B, G, D, Đ, Ž, Z, Dž',
+    'Bezvučni: P, K, T, Ć, Š, S, Č, F, H, C'
+]
 
-let question_list = window[parameter]
 
-for(let q of question_list){
-    let e = document.createElement('li')
-    e.innerHTML = q
-    list.appendChild(e)
+if (format_parameter == 'q'){
+    document.getElementById('title').innerHTML = 'Pitanja:'
+    let list = document.createElement('ol')
+    document.getElementById('main').appendChild(list)
+
+    let question_list = window[question_parameter]
+
+    for(let q of question_list){
+        let e = document.createElement('li')
+        e.innerHTML = q
+        list.appendChild(e)
+    }
+} else if (format_parameter == 'a'){
+    let list = document.createElement('ul')
+    list.style.listStyleType = 'none'
+    document.getElementById('main').appendChild(list)
+
+    let question_list = window[question_parameter]
+
+    for(let q of question_list){
+        let e = document.createElement('li')
+        if (q[0] == '!'){
+            e.innerHTML = q.substring(1)
+            e.style.fontWeight = 'bold'
+        } else{
+            e.innerHTML = q
+        }
+        list.appendChild(e)
+    }
 }
