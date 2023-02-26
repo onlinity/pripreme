@@ -65,7 +65,20 @@ var p2 = [
     'Zašto se jedinke razlikuju u različitim periodima u toku života?',
     'Od kojih ćelija nastaju sve telesne ćelije i kako?',
     'Koje su faze u razvoju insekata sa potpunim preobražajem?',
-    'Koje su faze u razvoju biljke?'
+    'Koje su faze u razvoju biljke?',
+    'Šta je evolucija?',
+    'Ko su bili najznačajniji naučnici koji su se bavili evolucijom?',
+    'Ko se naziva "ocem evolucije"?',
+    'Šta je govorila Lamarkova teorija?',
+    'Koje su Lamarkove zasluge u oblasti evolucije?',
+    'Koji su faktori evolucije prema Darvinovoj teoriji, i kako se ona drugačije naziva?',
+    'Koja su Darvinova najznačajnija dela?',
+    'Šta je specijacija?',
+    'Koji su evolucioni procesi (mehanizmi)?',
+    'Šta su mutageni i kakvi mogu biti?',
+    'Kako se mutacije dele prema veličini, uzroku i mogućnosti nasleđivanja?',
+    'Šta su protok gena i genetički drift?',
+    'Koji su načini specijacije?'
 ]
 
 var p3 = [
@@ -105,8 +118,49 @@ var p4 = [
     'Bezvučni: P, K, T, Ć, Š, S, Č, F, H, C'
 ]
 
+var p5 = [
+    '!Promenljive',
+    '!Nepromenljive',
+    'Imenice',
+    'Prilozi',
+    'Glagoli', 
+    'Predlozi',
+    'Zamenice', 
+    'Veznici',
+    'Pridevi',
+    'Rečce',
+    'Brojevi',
+    'Uzvici'
+]
 
-if (format_parameter == 'q'){
+var p6 = [
+    'Šta je evolucija?',
+    'Ko su bili najznačajniji naučnici koji su se bavili evolucijom?',
+    'Ko se naziva "ocem evolucije"?',
+    'Šta je govorila Lamarkova teorija?',
+    'Koje su Lamarkove zasluge u oblasti evolucije?',
+    'Koji su faktori evolucije prema Darvinovoj teoriji, i kako se ona drugačije naziva?',
+    'Koja su Darvinova najznačajnija dela?',
+    'Šta je specijacija?',
+    'Koji su evolucioni procesi (mehanizmi)?',
+    'Šta su mutageni i kakvi mogu biti?',
+    'Kako se mutacije dele prema veličini, uzroku i mogućnosti nasleđivanja?',
+    'Šta su protok gena i genetički drift?',
+    'Koji su načini specijacije?'
+]
+
+
+function bold(q, e){
+    if (q[0] == '!'){
+        e.innerHTML = q.substring(1)
+        e.style.fontWeight = 'bold'
+    } else{
+        e.innerHTML = q
+    }
+}
+
+
+if (format_parameter == 'q'){   //Pitanja
     document.getElementById('title').innerHTML = 'Pitanja:'
     let list = document.createElement('ol')
     document.getElementById('main').appendChild(list)
@@ -118,7 +172,7 @@ if (format_parameter == 'q'){
         e.innerHTML = q
         list.appendChild(e)
     }
-} else if (format_parameter == 'a'){
+} else if (format_parameter == 'a'){   //tekst 
     let list = document.createElement('ul')
     list.style.listStyleType = 'none'
     document.getElementById('main').appendChild(list)
@@ -127,12 +181,30 @@ if (format_parameter == 'q'){
 
     for(let q of question_list){
         let e = document.createElement('li')
-        if (q[0] == '!'){
-            e.innerHTML = q.substring(1)
-            e.style.fontWeight = 'bold'
-        } else{
-            e.innerHTML = q
-        }
+        bold(q, e)
         list.appendChild(e)
+    }
+} else if (format_parameter == 'table'){    //tabela
+    let table = document.createElement('table')
+    document.getElementById('main').appendChild(table)
+
+    let question_list = window[question_parameter]
+
+    for(let q of question_list){
+        if (question_list.indexOf(q) % 2 == 0){
+            let row = document.createElement('tr')
+            table.appendChild(row)
+            row.id = question_list.indexOf(q)
+            let data = document.createElement('td')
+            row.appendChild(data)
+            bold(q, data)
+        } else {
+            let data = document.createElement('td')
+            document.getElementById(question_list.indexOf(q) - 1).appendChild(data)
+            bold(q, data)
+        }
+        if (q == '-prazno-'){
+            data.style.border = 'none'
+        }
     }
 }
