@@ -149,6 +149,28 @@ var p6 = [
     'Koji su načini specijacije?'
 ]
 
+var p7 = [
+    'Koje su dve vrste evolucija čoveka?',
+    'Ko su bili i kada su nastali preci čoveka?',
+    'Koje adaptacije su te vrste stekle za život na drveću?',
+    'Ko su bili australopitekusi?',
+    'Koje karakteristike pretka čoveka su dovele do razvoja visoke inteligencije i kako?',
+    'Kakav je bio Homo habilis i koji mu je srpski naziv?',
+    'Kakav je bio Homo erectus, odakle je potekao i koji mu je srpski naziv?',
+    'Kada se pojavio i kakav je bio Homo sapiens?',
+    'Ko su bili neandertalci i denisovljani?',
+    'Da li postoje različite rase ljudske vrste?'
+]
+
+var p8 = [
+    'Šta je sukcesija?',
+    'Kakva sukcesija može biti prema uzroku i načinu nastanka?',
+    'Šta je degradacija?',
+    'Šta su pionirske vrste, prelazni stadijumi i klimaks biocenoze?',
+    'Kakvi mogu biti odnosi među članovima biocenoze u sukcesiji?',
+    'Šta su dominantne vrste?'
+]
+
 
 function bold(q, e){
     if (q[0] == '!'){
